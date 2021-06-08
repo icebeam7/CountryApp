@@ -1,0 +1,36 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CountryApp.CountryView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BindableLayout.ItemsSource="{Binding Countries}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="{Binding FlagUrl}" 
+                                    WidthRequest="64"
+                                    HeightRequest="64"/>
+
+
+                            <Label Text="{Binding CountryName}"
+                                   TextColor="Black"
+                                   Grid.Column="1" Grid.Row="0" 
+                                   FontSize="18"/>
+
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
