@@ -42,11 +42,16 @@
 
 	<ItemGroup>
 		<Compile Include="..\CountryApp\*.cs" Link="%(FileName)%(Extension)" />
+		<Compile Include="..\CountryApp\Models\*.cs" Link="Models\%(FileName)%(Extension)" />
+		<Compile Include="..\CountryApp\ViewModels\*.cs" Link="ViewModels\%(FileName)%(Extension)" />
+		<Compile Include="..\CountryApp\Services\*.cs" Link="Services\%(FileName)%(Extension)" />
+		<Compile Include="..\CountryApp\Views\*.cs" Link="Views\%(FileName)%(Extension)" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<EmbeddedResource Remove="Windows\*.xaml" />
 		<EmbeddedResource Include="..\CountryApp\*.xaml" Link="%(FileName)%(Extension)" />
+		<EmbeddedResource Include="..\CountryApp\Views\*.xaml" Link="Views\%(FileName)%(Extension)" />
 	</ItemGroup>
 
 	<ItemGroup>
